@@ -10,6 +10,8 @@ import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.annotations.RenderMethod;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -31,7 +33,7 @@ import org.osgi.service.component.annotations.Component;
 )
 public class FormularioCuervoPortlet extends MVCPortlet {
 	
-	public void Invio(ActionRequest request,  ActionResponse response)
+	public void formPDF(ActionRequest request,  ActionResponse response)
 			throws PortletException, IOException {
 			System.out.println("jjjj");
 			String username = ParamUtil.getString(request, "username");
@@ -39,4 +41,5 @@ public class FormularioCuervoPortlet extends MVCPortlet {
 			System.out.println(username);
 			System.out.println(password);
 	}
+	
 }

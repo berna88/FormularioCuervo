@@ -11,7 +11,8 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <liferay-theme:defineObjects />
 <portlet:defineObjects />
 
-<portlet:actionURL var="sendMailURL" name="Invio"></portlet:actionURL>
+<portlet:actionURL var="sendMailURL" name="formPDF"></portlet:actionURL>
+<<portlet:renderURL ></portlet:renderURL>
 
 <aui:form action="${sendMailURL}" method="POST">
 <aui:input type="text" name="username"/>
