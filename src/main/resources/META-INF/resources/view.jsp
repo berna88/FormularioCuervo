@@ -1,5 +1,20 @@
+<%@page import="javax.portlet.RenderURL"%>
 <%@ include file="/init.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<p>
-	<b><liferay-ui:message key="formulariocuervo.caption"/></b>
-</p>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %><%@
+taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
+taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
+taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<liferay-theme:defineObjects />
+<portlet:defineObjects />
+
+<portlet:actionURL var="sendMailURL" name="Invio"></portlet:actionURL>
+
+<aui:form action="${sendMailURL}" method="POST">
+<aui:input type="text" name="username"/>
+<aui:input type="password" name="password"/>
+<aui:button  type="submit" value="Enviar" />
+</aui:form>
