@@ -8,3 +8,9 @@ Export-Package: com.consistent.form.constants
 -plugin.resourcebundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 -plugin.sass: com.liferay.ant.bnd.sass.SassAnalyzerPlugin
 -sass: *
+Import-Package: *;resolution:=optional
+Bundle-ClassPath:\
+.,\
+lib/itextpdf.jar
+-includeresource:\
+lib/textpdf.jar=itextpdf-5.5.13.jar

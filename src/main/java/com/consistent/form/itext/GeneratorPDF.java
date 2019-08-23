@@ -1,5 +1,7 @@
 package com.consistent.form.itext;
 
+import com.itextpdf.text.Document;
+
 public class GeneratorPDF {
 	/*
 	 * private void writePDF() { Document document = new Document(); try { String
@@ -32,5 +34,8 @@ public class GeneratorPDF {
 	 * 
 	 * document.add(paragraphLorem); document.add(p3); document.close(); } catch
 	 * (Exception e) { // TODO: handle exception } }
-	 */
+	 */	 
+	private void writePDF() {
+		Document document = new Document();
+	}
 }
