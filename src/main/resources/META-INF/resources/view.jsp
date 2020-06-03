@@ -12,7 +12,11 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <portlet:defineObjects />
 
 <portlet:actionURL var="sendMailURL" name="formPDF"></portlet:actionURL>
-<<portlet:renderURL ></portlet:renderURL>
+<portlet:renderURL var="clickRenderURL">
+    <portlet:param name="jspPage" value="/WEB-INF/view/page2.jsp" />
+</portlet:renderURL>
+
+<a href="<%=clickRenderURL %>">Click here</a>
 
 <aui:form action="${sendMailURL}" method="POST">
 <aui:input type="text" name="username"/>
